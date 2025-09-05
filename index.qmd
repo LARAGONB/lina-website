@@ -11,17 +11,20 @@ format:
   <span class="dot"></span>
   <span class="name">Lina Aragón</span>
   <span class="subtitle">Plant Biologist</span>
+</span>
+
 </div>
-<nav class="header-nav">
- <a href="index.html">About</a>
- <a href="research.html">Research</a>
- <a href="outreach.html">Outreach</a>
- <a href="fieldwork.html">Fieldwork</a>
- <a href="publications.html">Publications</a>
- <a href="cv.html">CV</a>
-</nav>
+ <nav class="header-nav">
+  <a href="index.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="outreach.html">Outreach</a>
+  <a href="fieldwork.html">Fieldwork</a>
+  <a href="publications.html">Publications</a>
+  <a href="cv.html">CV</a>
+ </nav>
 </div>
 
+<div class="page-wrapper">
 <div class="main-row">
 <div class="bio-left">
 
@@ -53,4 +56,5 @@ Feeley Lab | University of Miami
 [![LinkedIn](icons/linkedin.svg)](https://linkedin.com/)
 </div>
   </div>
+</div>
 </div>

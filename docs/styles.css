@@ -12,6 +12,17 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
   font-weight: 300;
 }
 
+.page-wrapper {
+  padding-left: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-content {
+  margin-left: 0;
+}
+
+
 .main-header {
   display: flex;
   align-items: center;
@@ -23,15 +34,13 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
   margin-bottom: 0.5em;
 }
 
-/* Change to 3cm from left edge */
 .header-id {
   display: flex;
   align-items: center;
   gap: 0.4em;
-  margin-left: 3cm;
+  margin-left: 3cm;             /* Use previous layout for header distribution */
 }
 
-/* Dot style */
 .dot {
   height: 2em;
   width: 2em;
@@ -42,17 +51,22 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
 
 /* Name style */
 .name {
-  font-size: 2em;
-  margin-right: 0.15em;
+  font-size: 3em;
+  font-weight: 900;
   letter-spacing: 1px;
+  line-height: 1;
+  color: #222;
+  position: relative;
 }
 
-/* Subtitle closer to name */
 .subtitle {
-  font-size: 1.2em;
+  font-size: 1em;
   color: #222;
   font-weight: 300;
-  margin-left: 0.05em;
+  margin-left: 0.25em;
+  vertical-align: sub;
+  position: relative;
+  top: 0.5em;
 }
 
 /* Nav style: 5cm from right edge */
@@ -60,7 +74,7 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
   display: flex;
   gap: 2.7vw;
   font-size: 1.25em;
-  margin-right: 5cm;
+  margin-right: 5cm;            /* Use previous layout for header distribution */
 }
 
 .header-nav a {
@@ -71,6 +85,10 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
 }
 .header-nav a:hover {
   color: #406d4d;
+}
+
+.main-content {
+  margin-left: 16px;       /* Reduced left space for body text */
 }
 
 /* Main row: profile is right of main text */
