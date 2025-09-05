@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito+Sans:wght@300;400&display=swap');
 
 /* Fraunces for name and profile-name */
 .name, .profile-name, h1, h2, h3, h4, h5, h6 {
@@ -6,9 +6,9 @@
   font-weight: 700;
 }
 
-/* Avenir Light for body and other elements */
+/* Nunito Sans for body and other elements */
 body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
-  font-family: 'Avenir Light', 'Avenir', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Nunito Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 300;
 }
 
@@ -146,4 +146,20 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
   transition: opacity 0.2s;
 }
 .social-icons img:hover {
-  opacity: 
+  opacity: 1;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 700px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1em;
+  }
+  .header-nav {
+    gap: 1em;
+    font-size: 1em;
+    margin-top: 0.3em;
+  }
+}
