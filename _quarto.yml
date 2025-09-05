@@ -1,6 +1,12 @@
 project:
   type: website
   output-dir: docs
+
+format:
+  html:
+    theme: none
+    css: styles.css
+    
 website:
   title: "Lina Aragón"
   navbar:
@@ -21,8 +27,4 @@ website:
         href: resume.qmd
       - text: "Contact"
         href: contact.qmd
-format:
-  html:
-    theme: none
-    css: styles.css
 

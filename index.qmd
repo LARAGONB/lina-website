@@ -7,7 +7,7 @@ format:
 ---
 
 <div class="main-header">
-  <div class="header-left">
+  <div class="header-id">
     <span class="dot"></span>
     <span class="name">Lina Aragón</span>
     <span class="subtitle">Plant Biologist</span>
