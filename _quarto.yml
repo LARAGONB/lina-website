@@ -6,11 +6,11 @@ format:
   html:
     theme: none
     css: styles.css
-    
+
 execute:
   after:
-    - cp .nojekyll docs/.nojekyll
-    
+    - cp .nojekyll docs/.nojekyll   # Copy .nojekyll after render
+
 website:
   title: "Lina Aragón"
   navbar:

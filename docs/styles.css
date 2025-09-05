@@ -1,50 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
 
+/* Fraunces for name and profile-name */
+.name, .profile-name, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+}
+
+/* Avenir Light for body and other elements */
+body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
+  font-family: 'Avenir Light', 'Avenir', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+}
+
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2em;
-  padding: 1em 2em 1em 2em;
   background: #f7f9f6;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
   border-bottom: 2px solid #dadada;
-  flex-wrap: wrap;
+  margin-bottom: 0.5em;
 }
 
-.header-id {
+/* Change to 3cm from left edge */
+.header-left {
   display: flex;
   align-items: center;
-  gap: 0.25em; /* This makes dot/name/subtitle closer */
+  gap: 0.4em;
+  margin-left: 3cm;
 }
 
+/* Dot style */
 .dot {
-  height: 1.3em;
-  width: 1.3em;
+  height: 2em;
+  width: 2em;
   background-color: #406d4d;
   border-radius: 50%;
   display: inline-block;
 }
 
+/* Name style */
 .name {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
-  font-size: 1.3em;
+  font-size: 2em;
+  margin-right: 0.15em;
   letter-spacing: 1px;
 }
 
+/* Subtitle closer to name */
 .subtitle {
-  font-family: 'Avenir Light', 'Avenir', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: #222;
   font-weight: 300;
-  margin-left: 0.3em;
+  margin-left: 0.05em;
 }
 
+/* Nav style: 5cm from right edge */
 .header-nav {
   display: flex;
-  gap: 2vw;
-  font-size: 1.15em;
-  flex-wrap: wrap;
+  gap: 2.7vw;
+  font-size: 1.25em;
+  margin-right: 5cm;
 }
 
 .header-nav a {
@@ -57,17 +73,77 @@
   color: #406d4d;
 }
 
-/* Responsive (mobile, tablets) */
-@media (max-width: 700px) {
-  .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
-    padding: 1em;
-  }
-  .header-nav {
-    gap: 1em;
-    font-size: 1em;
-    margin-top: 0.3em;
-  }
+/* Main row: profile is right of main text */
+.main-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 2em;
+  padding: 0 2em;
 }
+
+.bio-left {
+  flex: 2 1 0;
+  min-width: 330px;
+  max-width: 60%;
+  font-size: 1.15em;
+  line-height: 1.7;
+  margin-right: 2em;
+}
+
+.profile-right {
+  flex: 1 1 0;
+  min-width: 220px;
+  text-align: center;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #406d4d;
+  margin-bottom: 1em;
+}
+
+.profile-name {
+  display: block;
+  font-size: 1.3em;
+  margin-bottom: 0.2em;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+}
+
+.profile-role {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 1em;
+}
+
+/* Styling for Welcome text */
+.welcome {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 0.6em;
+  color: #222;
+}
+
+.social-icons {
+  margin-top: 0.7em;
+}
+.social-icons a {
+  margin: 0 0.3em;
+  display: inline-block;
+}
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.social-icons img:hover {
+  opacity: 
