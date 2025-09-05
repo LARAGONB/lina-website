@@ -12,9 +12,14 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
   font-weight: 300;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .page-wrapper {
-  padding-left: 8px;
-  max-width: 800px;
+  padding-left: 0px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -28,7 +33,7 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
   align-items: center;
   justify-content: space-between;
   background: #f7f9f6;
-  padding-top: 1em;
+  padding-top: 0;
   padding-bottom: 0.5em;
   border-bottom: 2px solid #dadada;
   margin-bottom: 0.5em;
