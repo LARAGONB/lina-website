@@ -1,0 +1,19 @@
+---
+title: "Blog"
+---
+
+# Blog
+
+Share your latest posts and updates here.
+
+## Recent Posts
+
+### Post Title 1
+*Date*  
+Brief summary...
+
+### Post Title 2
+*Date*  
+Brief summary...
+
+Add more posts as needed!

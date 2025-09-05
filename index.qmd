@@ -1,0 +1,56 @@
+---
+title: ""
+format:
+  html:
+    theme: none
+    css: styles.css
+---
+
+<div class="main-header">
+  <div class="header-left">
+    <span class="dot"></span>
+    <span class="name">Lina Aragón</span>
+    <span class="subtitle">Plant Biologist</span>
+  </div>
+  <nav class="header-nav">
+    <a href="index.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="outreach.html">Outreach</a>
+    <a href="fieldwork.html">Fieldwork</a>
+    <a href="publications.html">Publications</a>
+    <a href="cv.html">CV</a>
+  </nav>
+</div>
+
+<div class="main-row">
+  <div class="bio-left">
+
+<span class="welcome">Welcome! Bienvenido</span>
+
+I'm Lina Aragón, a plant ecophysiologist and NatGeo explorer from Colombia. I am pursuing a Ph.D. in the [Feeley Lab](https://www.feeleylab.com/) at the University of Miami.  
+
+I want to understand how plants thrive under extreme environmental conditions without walking, talking, or seeing. How do they use available resources to live and co-exist, and how have their surrounding biotic and abiotic conditions shaped their functional traits? I look forward to deepening my knowledge of how plants might respond to climate change and the effects of this phenomenon on our planet. I am most keen about answering all these questions for tropical ecosystems.  
+
+I did my undergrad and first masters thesis projects in the [Lasso Lab](https://lassolab.uniandes.edu.co/) at Universidad de los Andes, Bogotá (Colombia). After that, I went to the [Messier Lab](https://messierlab.github.io/) at the University of Waterloo, Ontario (Canada), where I did my second master's during the COVID19 pandemic.  
+
+You can learn more about my current and past research projects [here](research.html). If you want to understand my nonlinear path check my [CV](cv.html) (current as of October 2022).
+
+  </div>
+  <div class="profile-right">
+
+![Profile Photo](images/profile.jpg){.profile-pic}
+
+<span class="profile-name">Lina Aragón, M.Sc.</span>
+
+Ph.D. Student  
+Feeley Lab | University of Miami
+
+<div class="social-icons">
+[![Google Scholar](icons/google-scholar.svg)](https://scholar.google.com/) 
+[![ResearchGate](icons/researchgate.svg)](https://www.researchgate.net/) 
+[![Twitter](icons/twitter.svg)](https://twitter.com/) 
+[![Instagram](icons/instagram.svg)](https://instagram.com/) 
+[![LinkedIn](icons/linkedin.svg)](https://linkedin.com/)
+</div>
+  </div>
+</div>

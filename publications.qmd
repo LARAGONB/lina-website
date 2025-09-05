@@ -1,0 +1,12 @@
+---
+title: "Publications"
+---
+
+# Publications
+
+List your publications below:
+
+- **Title 1**. Author(s), Journal, Year. [Link](#)
+- **Title 2**. Author(s), Journal, Year. [Link](#)
+
+Add more as needed!

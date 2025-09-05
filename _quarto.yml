@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "Lina Aragón"
+  navbar:
+    left:
+      - text: "About Me"
+        href: index.qmd
+      - text: "Research"
+        href: research.qmd
+      - text: "Publications"
+        href: publications.qmd
+      - text: "Outreach"
+        href: outreach.qmd
+      - text: "Fieldwork"
+        href: fieldwork.qmd
+      - text: "Blog"
+        href: blog.qmd
+      - text: "Resume (CV)"
+        href: resume.qmd
+      - text: "Contact"
+        href: contact.qmd
+format:
+  html:
+    theme: none
+    css: styles.css
+

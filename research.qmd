@@ -1,0 +1,17 @@
+---
+title: "Research"
+---
+
+# Research
+
+Describe your main research themes, current projects, and interests here.
+
+## Current Projects
+
+- **Project 1:** Description of your current project.
+- **Project 2:** Description of another project.
+
+## Research Interests
+
+- Topic 1
+- Topic 2

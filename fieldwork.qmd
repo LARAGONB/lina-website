@@ -1,0 +1,16 @@
+---
+title: "Fieldwork"
+---
+
+# Fieldwork
+
+Share your field experiences, expeditions, and related stories.
+
+## Recent Fieldwork
+
+- **Location/Project 1:** Description and insights.
+- **Location/Project 2:** Description and insights.
+
+```{.column-screen}
+![Fieldwork photo](images/fieldwork1.jpg)
+```

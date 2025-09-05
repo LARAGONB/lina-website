@@ -1,0 +1,20 @@
+---
+title: "Resume (CV)"
+---
+
+# Resume (CV)
+
+You can download my CV [here](files/CV.pdf).
+
+## Education
+
+- Degree, Institution, Year
+
+## Experience
+
+- Position, Organization, Year–Year
+
+## Skills
+
+- Skill 1
+- Skill 2
