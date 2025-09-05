@@ -24,7 +24,7 @@ body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
 }
 
 /* Change to 3cm from left edge */
-.header-left {
+.header-id {
   display: flex;
   align-items: center;
   gap: 0.4em;
