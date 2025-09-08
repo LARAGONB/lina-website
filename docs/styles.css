@@ -103,15 +103,15 @@ body {
   gap: 64px;
   max-width: 1200px;
   margin: 3em auto 0 auto;
-  padding-top: 4em;    /* <-- Increased top padding */
-  padding-right: 3em;
+  padding-top: 0.1em;    /* <-- Increased top padding */
+  padding-right: 0m;
   padding-bottom: 0;
   padding-left: 0;
 }
 
 .bio-left {
   flex: 2 1 0;
-  max-width: 60%;
+  max-width: 100%;
   min-width: 0;
   margin-left: 0;    /* <-- Remove any extra left margin */
 }
