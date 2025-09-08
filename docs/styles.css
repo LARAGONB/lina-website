@@ -82,7 +82,8 @@ body {
   display: flex;
   gap: 2.7vw;
   font-size: 1.25em;
-  margin-right: 5cm;
+  margin-left: auto;      /* <-- This pushes links to the right */
+  margin-right: 2em;
 }
 
 .header-nav a {
@@ -102,7 +103,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   min-height: 480px;
-  padding: 0 3em;
+  padding: 0 0em;
   position: relative;
   align-items: flex-start; /* === TOP ALIGN BOTH COLUMNS === */
 }
