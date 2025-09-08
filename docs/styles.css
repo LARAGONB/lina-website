@@ -103,8 +103,10 @@ body {
   gap: 64px;
   max-width: 1200px;
   margin: 3em auto 0 auto;
-  padding-left: 0;   /* <-- Move content flush to the left */
+  padding-top: 4em;    /* <-- Increased top padding */
   padding-right: 3em;
+  padding-bottom: 0;
+  padding-left: 0;
 }
 
 .bio-left {
