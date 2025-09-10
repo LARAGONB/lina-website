@@ -1,17 +1,25 @@
 ---
-title: "Research"
+title: ""
+format:
+  html:
+    theme: none
+    css: styles.css
 ---
 
-# Research
-
-Describe your main research themes, current projects, and interests here.
-
-## Current Projects
-
-- **Project 1:** Description of your current project.
-- **Project 2:** Description of another project.
-
-## Research Interests
-
-- Topic 1
-- Topic 2
+<div class="header-container">
+<div class="main-header">
+<div class="header-id">
+ <span class="dot"></span>
+ <span class="name">Lina Aragón</span>
+ <span class="subtitle">Plant Biologist</span>
+</div>
+ <nav class="header-nav">
+  <a href="index.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="outreach.html">Outreach</a>
+  <a href="fieldwork.html">Fieldwork</a>
+  <a href="publications.html">Publications</a>
+  <a href="cv.html">CV</a>
+</nav>
+</div>
+</div>
