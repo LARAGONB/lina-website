@@ -4,53 +4,72 @@ format:
   html:
     theme: none
     css: styles.css
+    
+  # links:
+  #   - icon: linkedin
+  #     text: LinkedIn
+  #     href: www.linkedin.com/in/linamaragon
+  #     target: _blank
+  #   - icon: github
+  #     text: GitHub
+  #     href: https://github.com/LARAGONB
+  #     target: _blank
+  #   - icon: researchgate
+  #     text: ResearchGate
+  #     href: https://www.researchgate.net/profile/Lina-Aragon-B
+  #   - icon: google
+  #     text: Google Scholar
+  #     href: https://scholar.google.com/citations?user=hHUvUD8AAAAJ&hl=en
+  #   - icon: envelope
+  #     text: Email
+  #     href: mailto:linamaragonb@gmail.com
 ---
 
-<div class="header-container">
-<div class="main-header">
-<div class="header-id">
- <span class="dot"></span>
- <span class="name">Lina Aragón</span>
- <span class="subtitle">Plant Biologist</span>
-</div>
- <nav class="header-nav">
-  <a href="index.html">About</a>
-  <a href="research.html">Research</a>
-  <a href="outreach.html">Outreach</a>
-  <a href="fieldwork.html">Fieldwork</a>
-  <a href="publications.html">Publications</a>
-  <a href="cv.html">CV</a>
+::: {.header-container}
+::: {.main-header}
+::: {.header-id}
+<span class="dot"></span>
+<span class="name">Lina Aragón</span>
+<span class="subtitle">Plant Biologist</span>
+:::
+<nav class="header-nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="research.html">Research</a>
+<a href="outreach.html">Outreach</a>
+<a href="fieldwork.html">Fieldwork</a>
+<a href="publications.html">Publications</a>
+<a href="cv.html">CV</a>
 </nav>
-</div>
-</div>
+:::
+:::
 
-<div class="page-wrapper">
-<div class="main-content-container">
-<div class="bio-left">
- <span class="welcome">Welcome! Bienvenido</span>
-   My name es Lina Aragón. I am a plant ecologist and physiologist, as well as a National Geographic and an Underground Explorer. I am a Latina in STEM from Colombia, currently  pursuing my Ph.D. in the [Jungle Biology Lab](https://www.junglebiology.org/) led by Dr. Ken Feeley at the University of Miami.
-   
-Plants do not move like we do; they don’t have legs to walk, mouths to communicate, or eyes to see in the same way we do. However, they possess their own unique ways of moving, communicating, sensing, and adapting to ever-changing environmental conditions. I find it fascinating that plants can respond to changes without being able to run or escape. 
+::: {.page-wrapper}
+::: {.main-content-container}
+::: {.bio-left}
+<span class="welcome">Welcome! Bienvenido</span>  
+My name is Lina Aragón, and I am passionate about plant ecology and physiology. As a National Geographic Explorer and an Underground Explorer, I proudly represent the Latina community in STEM from Colombia. Currently, I am pursuing my Ph.D. in the [Jungle Biology Lab](https://www.junglebiology.org/) under the mentorship of Dr. Ken Feeley at the University of Miami. 
 
-As a plant ecologist and physiologist, I aim to understand how plants thrive in what we might consider "extreme" environmental conditions. How do they utilize available resources to survive and coexist? How have their surrounding biotic and abiotic factors shaped their phenotypes? Finally, how are they affected by and how will they continue to be impacted by new environmental conditions due to climate change? 
+I am captivated by the unique ways plants respond to changes in their environments without the ability to flee. Yet, this extraordinary capacity may not be enough to ensure their survival amid the looming threats of climate change. This drives my research, which aims to uncover the strategies plants utilize to thrive in "extreme" environments. I also explore how plants respond to environmental shifts in both natural settings and controlled greenhouse conditions. 
 
-Throughout my nonlinear career, I have had the unique opportunity to explore these questions in the amazing tropical ecosystems of Colombia and Peru, the temperate forests of Canada, and the grasslands of South Africa. I hope many more amazing places are still coming, so stay tuned.
+Throughout my nonlinear career journey, I have had the privilege to investigate these critical questions in the breathtaking tropical ecosystems of Colombia and Peru, the serene temperate forests of Canada, and the vibrant grasslands of South Africa. I am eager to continue exploring incredible places and uncovering the mysteries of plant resilience, so stay tuned for more updates on my exciting journey!
+
 
 You can learn more about my current and past research projects [here](research.html). If you want to understand my nonlinear path check my [CV](cv.html) (current as of October 2022).
-</div>
-<div class="profile-column">
-<div class="profile-pic-container">
- <img src="assets/images/lina_field_main.jpg" alt="Profile Photo" class="profile-pic">
-</div>
- <span class="profile-name">Lina Aragón, M.Sc.</span>
-<div class="profile-role">Ph.D. Student<br>Feeley Lab | University of Miami</div>
-<div class="social-icons">
-  <a href="https://scholar.google.com/"><img src="assets/images/google_scholar_icon.png" alt="Google Scholar"></a>
-  <a href="https://www.researchgate.net/"><img src="assets/images/researchgate_icon.png" alt="ResearchGate"></a>
-  <a href="https://twitter.com/"><img src="icons/twitter.svg" alt="Twitter"></a>
-  <a href="https://instagram.com/"><img src="assets/images/instagram_icon.jpg"></a>
-  <a href="https://linkedin.com/"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
-</div>
-</div>
-</div>
-</div>
+:::
+::: {.profile-column}
+::: {.profile-pic-container}
+<img src="images/DSC02742.jpg" alt="Profile Photo" class="profile-pic">
+:::
+::: {#landing-icons}
+[{{< fa brands linkedin title="LinkedIn" >}}](https://www.linkedin.com/in/linamaragon)
+[{{< fa brands researchgate title="ResearchGate" >}}](https://www.researchgate.net/profile/Lina-Aragon-B)
+[{{< fa solid graduation-cap title="Google Scholar" >}}](https://scholar.google.com/citations?user=hHUvUD8AAAAJ&hl=en)
+[{{< fa brands github title="GitHub" >}}](href: https://github.com/LARAGONB)
+[{{< fa brands instagram title="Instagram" >}}](https://www.instagram.com/linamaragon/)
+[{{< fa solid envelope title="Email" >}}](mailto:linamaragonb@gmail.com)
+:::
+:::
+:::
+:::
+

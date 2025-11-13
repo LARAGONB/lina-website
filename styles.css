@@ -1,250 +1,499 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito+Sans:wght@300;400;900&display=swap');
 
-/* Fraunces for name and profile-name */
-.name, .profile-name, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fraunces', serif;
-  font-weight: 700;
+/* ========== 1. BASE: Variables & Fonts ========== */
+:root {
+  --color-background: #fcfcfc;
+  --color-mint-cream: #f7f9f6;
+  --color-golden-yellow: #ffd166;
+  --color-aqua-blue: #37bcd4;
+  --color-forest-green: #577e77;
+  --color-evergreen: #1f433d;
+
+  --color-golden-yellow-rgb: 255, 209, 102;
+  --color-aqua-blue-rgb: 55, 188, 212;
+  --color-forest-green-rgb: 87, 126, 119;
+  --color-evergreen-rgb: 31, 67, 61;
+
+  --main-left: 5rem;
+  --main-max-width: 100rem;
+  --pub-right-space: 2rem;
 }
 
-/* Nunito Sans for body and other elements */
-body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome {
+/* FONT SETUP */
+body, .subtitle, .header-nav a, .bio-left, .profile-role, .welcome, .pub-title {
   font-family: 'Nunito Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   font-weight: 300;
 }
-
+.name, .profile-name, h1, h2, h3, h4, h5, h6, .pubs-year {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+}
 body {
   margin: 0;
   padding: 0;
+  background: var(--color-background);
+  color: var(--color-evergreen);
 }
 
+/* ========== 2. LAYOUT ========== */
 .page-wrapper {
-  padding-left: 0px;
-  max-width: 1400px;
+  max-width: var(--main-max-width);
   margin: 0 auto;
 }
 
+/* ========== 3. HEADER COMPONENT ========== */
 .header-container {
   width: 100%;
-  background: #f7f9f6;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  border-bottom: 2px solid #dadada;
-  padding-bottom: 0.5em;
+  background: var(--color-mint-cream);
+  box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.06);
 }
-
 .main-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding-top: 0;
-  padding-bottom: 0.2em;
+  width: 100%;
 }
-
 .header-id {
   display: flex;
   align-items: center;
-  gap: 0em;
-  margin-left: 2cm;
-  min-width: 550px; 
+  gap: 0;
+  margin-left: var(--main-left);
 }
-
 .dot {
   height: 2em;
   width: 2em;
-  background-color: #406d4d;
+  background-color: var(--color-forest-green);
   border-radius: 50%;
   display: inline-block;
 }
-
-/* Name style */
 .name {
   font-size: 3em;
   font-weight: 900;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625em;
   line-height: 1;
-  color: #222;
+  color: #111;
   position: relative;
 }
-
 .subtitle {
   font-size: 1em;
-  color: #222;
+  color: var(--color-forest-green);
   font-weight: 300;
   margin-left: 0.25em;
   vertical-align: sub;
   position: relative;
   top: 0.5em;
 }
-
-/* Nav style: 5cm from right edge */
+/* HEADER NAV */
 .header-nav {
   display: flex;
   gap: 2.7vw;
   font-size: 1.25em;
-  margin-left: auto;      /* <-- This pushes links to the right */
-  margin-right: 2em;
+  margin-right: 2rem;
 }
-
 .header-nav a {
   text-decoration: none;
-  color: #222;
+  color: var(--color-evergreen);
   font-weight: 300;
   transition: color 0.15s;
+  position: relative;
 }
 .header-nav a:hover {
-  color: #406d4d;
+  color: var(--color-aqua-blue);
+}
+.header-nav a::after {
+  content: "";
+  display: block;
+  height: 0.125rem;
+  width: 0;
+  background: var(--color-aqua-blue);
+  transition: width 0.22s;
+  position: absolute;
+  left: 0; bottom: -0.1875rem;
+}
+.header-nav a:hover::after {
+  width: 100%;
 }
 
+/* ========== 4. PROFILE & BIO COMPONENTS (MAIN FLEX) ========== */
 .main-content-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 64px;
-  max-width: 1200px;
-  margin: 3em auto 0 auto;
-  padding-top: 0.1em;    /* <-- Increased top padding */
-  padding-right: 0m;
-  padding-bottom: 0;
-  padding-left: 0;
+  gap: 1rem;
+  width: 100%;
+  padding-top: 1.5rem;
+  justify-content: flex-start;
 }
 
 .bio-left {
-  flex: 2 1 0;
-  max-width: 100%;
+  margin-left: var(--main-left);
+  margin-right: 2rem;
+  max-width: 55rem;
   min-width: 0;
-  margin-left: 0;    /* <-- Remove any extra left margin */
   font-size: 1.2em;
+  flex: 2 1 0;
 }
 
 .profile-column {
-  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 320px;
-  max-width: 420px;
-  margin-top: 0; /* ensures top alignment */
+  min-width: 20rem;
+  max-width: 26.25rem;
+  margin-top: 0;
+  margin-left: 1rem;
+  flex: 1 1 0;
 }
-
 /* Profile picture container and image */
 .profile-pic-container {
-  width: 300px;
-  height: 300px;
+  width: 25rem;
+  height: 25rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 8px solid #406d4d;
-  margin-top: 20px;
-  margin-bottom: 16px;
+  border: 0.125rem solid var(--color-forest-green);
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
   background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.08);
   display: flex;
-  align-items: center;      /* <- vertically center the image */
-  justify-content: center;  /* <- horizontally center the image */
-}
-
-.profile-pic {
-  width: 450px;
-  height: 450px;
-  object-fit: cover;
-  object-position: 145% 10%;  /* <- center the image in the circle */
-}
-/* Profile name and role */
-.profile-name {
-  display: block;
-  font-size: 1.25em;
-  font-weight: bold;
-  color: #222;
-  text-align: center;
-  margin-bottom: 4px;
-}
-
-.profile-role {
-  text-align: center;
-  font-size: 1em;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* Social icons */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
   align-items: center;
-  text-align: center;
   justify-content: center;
 }
-
-.social-icons img {
-  width: 28px;
-  height: 28px;
-  vertical-align: middle;
-  transition: transform 0.2s;
+.profile-pic {
+  width: 25.5rem;
+  height: 25.5rem;
+  object-fit: cover;
 }
 
-.social-icons img:hover {
-  transform: scale(1.15);
+/* Profile/social icons */
+#landing-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+#landing-icons a {
+  font-size: 1.5rem;
+  color: var(--color-aqua-blue);
+  margin-right: 0.3em;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+#landing-icons a:hover {
+  color: var(--color-golden-yellow);
 }
 
-/* Styling for Welcome text */
+/* ========== 5. SECTION ACCENT, WELCOME, BUTTONS, LINKS ========== */
+.section-accent {
+  background: #f7f9f6;
+  border-radius: 1em;
+  padding: 1.2em 1.5em;
+  margin: 2em 0;
+  color: var(--color-evergreen);
+}
 .welcome {
   display: block;
   font-size: 2em;
-  margin-top: 0;         /* ensures at top of column */
-  margin-bottom: 0.6em;  /* space below welcome */
-  color: #222;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  color: var(--color-evergreen);
   font-weight: 150;
   padding: 0;
   line-height: 1.1;
 }
 
-/* Responsive: stack on small screens */
-@media (max-width: 700px) {
-  .main-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
-    padding: 1em;
+/* Buttons */
+.button, .btn, button, input[type="submit"] {
+  background: var(--color-golden-yellow);
+  color: #222;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.6em 1.3em;
+  font-size: 1em;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.03);
+  transition: background 0.18s, color 0.18s;
+}
+.button:hover, .btn:hover, button:hover, input[type="submit"]:hover {
+  background: var(--color-forest-green);
+  color: #fff;
+}
+
+/* Links */
+a, .bio-left a, .section-accent a {
+  color: var(--color-aqua-blue);
+  text-decoration-color: var(--color-aqua-blue);
+  transition: color 0.18s, text-decoration-color 0.18s;
+}
+a:hover, .bio-left a:hover, .section-accent a:hover {
+  color: var(--color-aqua-blue);
+  text-decoration-color: var(--color-aqua-blue);
+}
+.main-content-container a {
+  color: var(--color-aqua-blue);
+  text-decoration-color: var(--color-aqua-blue);
+  transition: color 0.18s, text-decoration-color 0.18s;
+}
+.main-content-container a:hover,
+.main-content-container a:focus {
+  color: var(--color-golden-yellow);
+  text-decoration-color: var(--color-golden-yellow);
+}
+
+/* ========== 6. PUBLICATIONS COMPONENT ========== */
+.publications-section {
+  max-width: var(--main-max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Group for each year's pubs */
+.pub-year-group {
+  margin-bottom: 0;
+  position: relative;
+}
+
+/* The divider: add it in your HTML only between two years */
+.publications-section .pub-divider {
+  border: none;
+  border-top: 0.25rem solid var(--color-golden-yellow);
+  background: none;
+  height: 0;
+  margin: 3em var(--pub-right-space,2rem) 2em var(--main-left,5rem);
+  max-width: calc(100% - var(--main-left,5rem) - var(--pub-right-space,2rem));
+  width: auto;
+  box-sizing: border-box;
+  display: block;
+  opacity: 1;
+}
+
+/* Hide default <hr> color for dividers that might not have the class! */
+hr:not(.pub-divider) {
+  border: none;
+  height: 0;
+  margin: 0;
+  background: none;
+}
+
+.pubs-year {
+  font-size: 2em;
+  font-weight: 900;
+  color: var(--color-aqua-blue);
+  margin-bottom: 0.7em;
+  margin-top: 2em;
+  margin-left: var(--main-left);
+  clear: both;
+  display: block;
+}
+
+/* Publication box: left edge with year, right edge 2rem from page end */
+.pub-entry {
+  display: flex;
+  align-items: flex-start;
+  background: var(--color-mint-cream);
+  border-radius: 0.9375rem;
+  margin-bottom: 2em;
+  margin-left: var(--main-left);
+  margin-right: var(--pub-right-space);
+  max-width: calc(100% - var(--main-left) - var(--pub-right-space));
+  padding: 1.2em 2em;
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.06);
+  position: relative;
+  border: none !important;
+}
+
+/* Publication content */
+.pub-thumb {
+  width: 8.125rem;
+  height: 8.125rem;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  margin-right: 2em;
+  flex-shrink: 0;
+  border: 0px solid var(--color-forest-green); 
+  border-radius: 0;
+}
+.pub-main {
+  flex: 1;
+}
+.pub-title {
+  font-size: 1.35em;
+  font-weight: 900;
+  font-size: 1.4em;
+  color: var(--color-forest-green);
+  margin-bottom: 0.3em;
+  border-bottom: 0.125rem;
+  letter-spacing: 0.01em;
+  display: inline;
+  padding-bottom: 0.1em;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;   /* optional: moves underline further from text */
+  text-decoration-thickness: 0.05em; /* optional: makes underline thicker */
+}
+.pub-authors {
+  margin-bottom: 0.3em;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+.pub-journal-year {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+.pub-journal a {
+  color: var(--color-aqua-blue);
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;   /* optional: moves underline further from text */
+  text-decoration-thickness: 0.01em; /* optional: makes underline thicker */
+}
+/* Badges */
+.pub-badge {
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.2em 0.8em;
+  border-radius: 0.5em;
+  font-size: 0.95em;
+  font-weight: 700;
+}
+.pub-badge.pdf {
+  background: var(--color-golden-yellow);
+  color: #222;
+  text-decoration: none;
+}
+.pub-badge.highlight {
+  background: var(--color-forest-green);
+  color: #fff;
+}
+
+/* Responsive: keep divider aligned with publication cards */
+@media (max-width: 900px) {
+  .publications-section .pub-divider {
+    margin-left: 0.5em;
+    margin-right: 1em;
+    max-width: calc(100vw - 0.5em - 1em);
   }
-  .header-nav {
-    gap: 1em;
-    font-size: 1em;
-    margin-top: 0.3em;
+}
+@media (max-width: 600px) {
+  .publications-section .pub-divider {
+    margin-left: 0.25em;
+    margin-right: 0.5em;
+    max-width: calc(100vw - 0.25em - 0.5em);
+  }
+}
+
+/* ========== 7. UTILITIES (color helpers) ========== */
+.accent-bg-yellow-80 {
+  background: rgba(var(--color-golden-yellow-rgb), 0.8);
+}
+.accent-bg-yellow-30 {
+  background: rgba(var(--color-golden-yellow-rgb), 0.3);
+}
+.text-aqua-70 {
+  color: rgba(var(--color-aqua-blue-rgb), 0.7);
+}
+.border-evergreen-15 {
+  border: 2px solid rgba(var(--color-evergreen-rgb), 0.15);
+}
+
+/* ========== 8. RESPONSIVE ========== */
+@media (max-width: 1050px) {
+  .profile-pic-container {
+    width: 15rem;
+    height: 15rem;
+  }
+  .profile-pic {
+    width: 16rem;
+    height: 16rem;
   }
   .main-content-container {
+    gap: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .main-content-container {
     flex-direction: column;
-    gap: 0em;
-    min-height: unset;
-    padding: 0 2em;
+    gap: 0;
+    padding: 0 1em;
+    padding-top: 2rem;
   }
   .bio-left {
+    margin-left: 0.5em;
     max-width: 100%;
-    margin-right: 0;
     min-width: 0;
   }
   .profile-column {
     align-items: center;
     max-width: 100%;
-    margin-top: 0;
+    margin-top: 1.5em;
   }
   .profile-pic-container {
-    width: 180px;
-    height: 180px;
+    width: 10rem;
+    height: 10rem;
   }
   .profile-pic {
-    width: 220px;
-    height: 260px;
+    width: 11rem;
+    height: 11rem;
   }
-  .profile-name,
-  .profile-role,
-  .social-icons {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  .publications-section {
+    max-width: 100vw;
+    padding: 0 0.5em;
   }
-  .welcome {
+  .pubs-year {
+    margin-left: 0.5em;
     font-size: 1.3em;
-    margin-bottom: 0.4em;
+  }
+  .pub-entry {
+    margin-left: 0.5em;
+    margin-right: 1em;
+    max-width: calc(100vw - 0.5em - 1em);
+    padding: 1em 0.5em;
+  }
+}
+@media (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 0.5em;
+  }
+  .header-id {
+    margin-left: 0.25em;
+  }
+  .main-content-container {
+    flex-direction: column;
+    gap: 0;
+    padding: 0 0.5em;
+    padding-top: 1rem;
+  }
+  .bio-left {
+    margin-left: 0.25em;
+  }
+  .profile-column {
+    align-items: center;
+    max-width: 100%;
+    margin-top: 1em;
+  }
+  .profile-pic-container {
+    width: 7rem;
+    height: 7rem;
+  }
+  .profile-pic {
+    width: 8rem;
+    height: 8rem;
+  }
+  .pubs-year {
+    margin-left: 0.25em;
+    font-size: 1.1em;
+  }
+  .pub-entry {
+    margin-left: 0.25em;
+    margin-right: 0.5em;
+    max-width: calc(100vw - 0.25em - 0.5em);
+    padding: 0.5em 0.25em;
+    flex-direction: column;
+    align-items: stretch;
   }
 }

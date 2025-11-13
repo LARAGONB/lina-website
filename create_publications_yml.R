@@ -1,0 +1,82 @@
+# Install and load the yaml package
+install.packages("yaml")   # Only run if not already installed
+library(yaml)
+
+# Create the publications list
+publications <- list(
+  list(
+    year = 2025,
+    image = "images/plant_diversity_ambg.jpg",
+    title = "Plant Diversity and Endemism of the Sierra Nevada De Santa Marta, Colombia, with Floristic Comparisons to Surrounding Mountains",
+    authors = "Fortier, Riley P; Kullberg, Alyssa T; **Aragón, Lina**; Bernal-Escobar, Manuel; Contreras, Maria Paula; Hurtado, Camilo Palacios; Lautenschlager, Laís; Feeley, Kenneth J",
+    journal = "Annals of the Missouri Botanical Garden, 110(1), 71–87.",
+    link = "https://www.mobot.org/mobot/research/annals.html",
+    badges = list()
+  ),
+  list(
+    year = 2024,
+    image = "images/rising_miami_ufug.jpg",
+    title = "Rising temperatures will make Miami’s street life even more exotic",
+    authors = "Kullberg, Alyssa T; **Aragón, Lina**; Bernal-Escobar, Manuel; Fortier, Riley; Lautenschlager, Laís; Ballantyne, Jacqueline; Feeley, Kenneth J",
+    journal = "Urban Forestry & Urban Greening, 101, 128502.",
+    link = "https://drive.google.com/file/d/1zpxw0FhHL6DHGtznutIXSU5Zdm-22whj/view?usp=sharing",
+    badges = list()
+  ),
+  list(
+    year = 2024,
+    image = "images/solar_powered_ffym.jpg",
+    title = "Solar-Powered Life: How Plants And Other Organisms Produce Their Own Food",
+    authors = "**Aragón, Lina**; Feeley, Kenneth J",
+    journal = "Frontiers for Young Minds, 12.",
+    link = "https://drive.google.com/file/d/1ASPuDI46MZpCS6RTQLDd-h7Yd0Hb1uSG/view?usp=sharing",
+    badges = list()
+  ),
+  list(
+    year = 2024,
+    image = "images/diversity_cloud_forest_afs.jpg",
+    title = "Diversity, composition, and structure of a 1-hectare tree plot in the cloud forest of the Sierra Nevada de Santa Marta, Colombia",
+    authors = "Fortier, Riley P; Bernal-Escobar, Manuel; Kullberg, Alyssa T; Osorio Ospina, Juan Camilo; Herrera Medina, Yeison; **Aragón, Lina**; Palacios Hurtado, Camilo; Contreras, Maria Paula",
+    journal = "Annals of Forest Science, 81(1), 24.",
+    link = "https://drive.google.com/file/d/1j3ADtDEuFcMNl2puXtQSsYt8oI1eJEtt/view?usp=sharing",
+    badges = list()
+  ),
+  list(
+    year = 2024,
+    image = "images/advice_field_besa.jpg",
+    title = "Advice from the field: Practical skills, challenges, and how to support early career ecologists",
+    authors = "Reichenborn, Molly M; Rottler, Caitlin; **Aragón, Lina**; Bishop, Tara BB; Hayes, Katherine; Kottler, Ezra; Talal, Michelle L; Sommers, Pacifica",
+    journal = "The Bulletin of the Ecological Society of America, 105(2), e02127",
+    link = "https://drive.google.com/file/d/1pJMIibJGVZAhhLZC6vmDsmpTYcQqRpWN/view?usp=sharing",
+    badges = list()
+  ),
+  list(
+    year = 2023,
+    image = "images/inselbergs_aob.jpg",
+    title = "Tropical shrubs living in an extreme environment show convergent ecological strategies but divergent ecophysiological strategies",
+    authors = "**Aragón, Lina**; Messier, Julie; Atuesta-Escobar, Natalia; Lasso, Eloisa",
+    journal = "Annals of Botany, 131(3), 491–502.",
+    link = "https://drive.google.com/file/d/13BWxmJc2ow803670qv5H5dOFYsmfw89Z/view?usp=sharing",
+    badges = list()
+  ),
+  list(
+    year = 2021,
+    image = "images/homeostatic_response_fee.jpg",
+    title = "Homeostatic response to three years of experimental warming suggests high intrinsic natural resistance in the páramos to warming in the short term",
+    authors = "Lasso, Eloisa; Matheus-Arbeláez, Paola; Gallery, Rachel E; Garzón-López, Carol; Cruz, Marisol; Leon-Garcia, Indira V; **Aragón, Lina**; Ayarza-Páez, Alejandra; Curiel Yuste, Jorge",
+    journal = "Frontiers in Ecology and Evolution, 9, 615006.",
+    link = "https://drive.google.com/file/d/19odJ2cxm9YCTlhRngqLyyA6DKVdKOnZR/view?usp=sharing",
+    badges = list()
+  ),
+  list(
+    year = 2018,
+    image = "images/young_cacti_jae.jpg",
+    title = "How do young cacti (seeds and seedlings) from tropical xeric environments cope with extended drought periods?",
+    authors = "**Aragón, Lina**; Lasso, Eloisa",
+    journal = "Journal of Arid Environments, 154, 1–7.",
+    link = "https://drive.google.com/file/d/1HwKFmu4xAa7LBEDKDO6kl5Z5bcAHfqkn/view?usp=sharing",
+    badges = list()
+  )
+)
+
+# Write the list to YAML
+write_yaml(publications, "publications.yml")

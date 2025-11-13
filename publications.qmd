@@ -1,12 +1,70 @@
 ---
-title: "Publications"
+title: ""
+format:
+  html:
+    toc: false
+    theme: none
+    
+resources:
+  - publications.yml
+css: styles.css
 ---
 
-# Publications
+::: {.header-container}
+::: {.main-header}
+::: {.header-id}
+<span class="dot"></span>
+<span class="name">Lina Aragón</span>
+<span class="subtitle">Plant Biologist</span>
+:::
+<nav class="header-nav">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="research.html">Research</a>
+<a href="outreach.html">Outreach</a>
+<a href="fieldwork.html">Fieldwork</a>
+<a href="publications.html">Publications</a>
+<a href="cv.html">CV</a>
+</nav>
+:::
+:::
 
-List your publications below:
-
-- **Title 1**. Author(s), Journal, Year. [Link](#)
-- **Title 2**. Author(s), Journal, Year. [Link](#)
-
-Add more as needed!
+::: {.publications-section}
+```{r}
+#| echo: false
+#| results: asis
+library(yaml)
+pubs <- yaml::read_yaml("publications.yml")
+years <- sort(unique(sapply(pubs, function(x) x$year)), decreasing = TRUE)
+for (i in seq_along(years)) {
+  y <- years[i]
+  cat(sprintf('<div class="pubs-year">%s</div>', y))
+  for (p in pubs) {
+    if (p$year == y) {
+      cat('<div class="pub-entry">')
+      cat(sprintf('<img class="pub-thumb" src="%s" alt="thumbnail">', p$image))
+      cat('<div class="pub-main">')
+      cat(sprintf('<div class="pub-title">%s</div>', p$title))
+      cat(sprintf('<div class="pub-authors">%s</div>', p$authors))
+      if (!is.null(p$journal) && p$journal != "") {
+        cat(sprintf('<div class="pub-journal-year"><span class="pub-journal"><a href="%s" target="_blank">%s</a></span></div>', p$link, p$journal))
+      }
+      if (!is.null(p$badges)) {
+        for (b in p$badges) {
+          if (b$type == "pdf") {
+            cat(sprintf('<a class="pub-badge pdf" href="%s" target="_blank">%s</a>', b$url, b$text))
+          } else if (b$type == "highlight") {
+            cat(sprintf('<span class="pub-badge highlight">%s</span>', b$text))
+          }
+        }
+      }
+      cat('</div></div>')
+    }
+  }
+  # Only add divider if not the last year
+  if (i < length(years)) {
+    cat('<hr class="pub-divider">')
+  }
+}
+```
+:::

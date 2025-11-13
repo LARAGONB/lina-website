@@ -15,8 +15,10 @@ website:
   title: "Lina Aragón"
   navbar:
     left:
-      - text: "About Me"
+      - text: "Home"
         href: index.qmd
+      - text: "About Me"
+        href: about.qmd
       - text: "Research"
         href: research.qmd
       - text: "Publications"
@@ -29,6 +31,6 @@ website:
         href: blog.qmd
       - text: "Resume (CV)"
         href: resume.qmd
-      - text: "Contact"
+      - text: "Get in touch!"
         href: contact.qmd
 
